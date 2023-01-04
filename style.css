@@ -6,6 +6,8 @@ body {
 .none { display: none; }
 
 .red { border: 1px solid red; }
+.red-text { color: red; }
+.green-text { color: green; }
 .green { border: 1px solid green; }
 .blue { border: 1px solid blue; }
 

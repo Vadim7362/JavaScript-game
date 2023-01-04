@@ -217,5 +217,210 @@
 // console.log(autoBrands[2]);
 // console.log(autoBrands[3]);
 
+// 7.1 Array methods
 
+/*
+.push(), .pop(), .shift(), .unshift(), .splice(), .slice(), .forEach(),
+.indexOf(), .includes();
+*/
+
+/*
+arr.push(items) - добавить элемент в конец массива
+arr.pop() - удалить элемент из конца массива
+arr.shift() - удалить элемент из начала массива
+arr.unshift(...items) - добавить элемент в начало массива
+arr.splice([start], [deleteCount, newElements])
+*/
+
+// const autoBrands = ['Audi', 'BMW', 'Mazda', 'Toyota'];
+// console.log(autoBrands);
+
+// autoBrands.push('Lexus');
+// console.log(autoBrands);
+
+// autoBrands.splice(1, 3);
+// console.log(autoBrands);
+
+
+// 8. Cicles
+
+// console.log('Start');
+
+// for (let i = 0; i < 10; i++) {
+//   console.log(i);
+// }
+
+// console.log('Finish');
+
+// 9. Обход массива циклом for.
+
+// const autoBrands = ['AUDI', 'BMV', 'Mazda', 'Toyota'];
+
+// for(i = 0; i < autoBrands.length; i++) {
+//   console.log(autoBrands[i]);
+// }
+
+// 10. Обход массива циклом for (of).
+
+// const autoBrands = ['AUDI', 'BMV', 'Mazda', 'Toyota'];
+
+// for (let item of autoBrands) {
+//   console.log(item);
+// }
+
+// 11. Обход массива методом forEach()
+
+// const autoBrands = ['AUDI', 'BMV', 'Mazda', 'Toyota'];
+
+// autoBrands.forEach(function (brand, i) {
+//   console.log(`${brand} => ${i}`);
+// })
+
+
+// autoBrands.forEach(printBrand);
+
+// function printBrand(brand, i) {
+//   console.log(`${brand} => ${i}`);
+// }
+
+
+// autoBrands.forEach((brand, i) => console.log(`${brand} => ${i}`));
+
+
+//  12.  Объекты.
+
+// let userName = 'Vadim';
+// let age = 27;
+// let isMarried = true;
+
+// const person = {
+//   userName: 'Vadim',
+//   age: 27,
+//   isMarried: true,
+//   profession: 'JS DEVELOPER'
+// }
+
+// console.log(person);
+// console.log(person.userName);
+// console.log(person['age']);
+
+// let propertyName = 'profession';
+// console.log(person[propertyName]);
+
+// person.nationaliti = 'Russian';
+// console.log(person); 
+
+// delete person.isMarried;
+// console.log(person);
+
+// 13. Методы в объектах.
+
+// const person = {
+//   userName: 'Vadim',
+//   age: 27,
+//   isMarried: true,
+//   sayHi: function (name) {
+//     console.log(`Hello ${name}!`)
+//   }
+// };
+
+// person.sayHi('Oleg');
+
+// 14. Ключевое слово this.
+
+// const person = {
+//   userName: 'Vadim',
+//   age: 27,
+//   isMarried: true,
+//   sayHi: function (yourName) {
+//     console.log(this);
+//     console.log(`Hello ${yourName}! My name is ${this.userName}.`);
+//   }
+// };
+
+// person.sayHi('Oleg');
+
+// 15. Обход объекта циклом for in (не путать с for of).
+
+// В отличии от for of, for in может обходить неитерируемые 
+// объекты и возвращает ключи.
+
+// const person = {
+//   userName: 'Vadim',
+//   age: 27,
+//   isMarried: true,
+//   sayHi: function (yourName) {
+//     console.log(this);
+//     console.log(`Hello ${yourName}! My name is ${this.userName}.`);
+//   }
+// };
+
+// for (let key in person) {
+//   console.log(key, ':', person[key]);
+// }
+
+// 17.  Классы. Конструкторы объектов.
+
+//class Person {
+//   constructor(userName, age, isMarried) {
+//     this.userName = userName;
+//     this.age = age;
+//     this.isMarried = isMarried;
+//   }
+
+//   sayHi (name) {
+//     console.log(`Hello ${name}! My name is ${this.userName}.`);
+//   }
+// }
+
+// const person1 = new Person('Vadim', 27, true);
+// const person2 = new Person('Oleg', 32, false);
+// const person3 = new Person('Mariya', 2, false);
+
+// console.log(person1);
+// console.log(person2);
+// console.log(person3);
+// person1.sayHi('Anastasiya');
+// person2.sayHi('Evgeniy');
+// person3.sayHi('Dmitriy');
+
+
+// Выбор DOM элементов
+// Выбор одного DOM элемента по селектору
+// document.querySelector('selector');
+
+// document.querySelector('h2').classList.add('red');
+
+// const heading2 = document.querySelector('h2');
+// heading2.classList.add('blue');
+
+// document.querySelector('.heading-3').classList.add('green');
+
+// Выбор коллекции элементов
+
+// const headings = document.querySelectorAll('h2');
+// console.log(headings);
+
+// for (let heading of headings) {
+//   heading.classList.add('red-text');
+// }
+
+// const paragraphs = document.querySelectorAll('p');
+// console.log(paragraphs);
+
+// 1 Вариант через for of
+// for (let p of paragraphs) {
+//   p.classList.add('green-text');
+// };
+
+// 2 Вариант через forEach
+// paragraphs.forEach(function (p) {
+//   p.classList.add('green-text');
+// });
+
+// Также есть следующие методы (менее распространенные)
+
+// document.getElementsByClassName('link'); //Выбор коллекции элементов по CSS классу.
+// document.getElementsByTagName('h2'); // Выбор коллекции элементов по тегу.
+// document.getElementById('header'); // Выбор одного элемента по id.
 
