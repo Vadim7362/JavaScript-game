@@ -418,9 +418,167 @@ arr.splice([start], [deleteCount, newElements])
 //   p.classList.add('green-text');
 // });
 
-// Также есть следующие методы (менее распространенные)
+// Также есть следующие методы (менее распространенные ES5)
 
 // document.getElementsByClassName('link'); //Выбор коллекции элементов по CSS классу.
 // document.getElementsByTagName('h2'); // Выбор коллекции элементов по тегу.
 // document.getElementById('header'); // Выбор одного элемента по id.
 
+
+// ==============Работа с CSS Классами======================
+
+/*
+element.classList.add();
+.add();
+.remove();
+.toggle();
+.contains();
+*/
+
+// const heading = document.querySelector('h2');
+// console.log(heading);
+
+
+// heading.classList.add('red-text');
+// heading.classList.remove('red-text');
+
+// heading.classList.toggle('green-text');
+// heading.classList.toggle('green-text');
+
+// if (heading.classList.contains('green')) {
+//   heading.classList.remove('green');
+// } else {
+//   heading.classList.add('red-text');
+// }
+
+// heading.classList.add('red'); 
+
+
+
+//==============Работа с атрибутами==================
+
+/*
+getAttribute(attreName) - возвращает значение указанного атрибута
+setAttribute(name, value) - добавляет указанный атрибут и его значение к элементу
+hasAttribute(attreName) - возвращает true при наличии у элемента указанного атрибута
+removeAttribute(attreName) - удаляет указанный атрибут
+
+
+toggleAttribute(name, force) - добавляет новый атрибут при отсутствии, либо удаляет
+существующий
+hasAttributes() - возвращает true, если у элемента имеются какие-либо атрибуты
+getAttributsNames() - возвращает названия атрибутов элемента
+*/
+
+// const img = document.querySelector('#logo');
+
+// img.setAttribute('src', './img/php.png');
+// img.setAttribute('width', '200');
+// img.src = ('./img/js.png');
+
+// const button = document.querySelector('#button');
+// button.setAttribute('value', 'Отправить');
+// button.value = 'Текст для кнопки';
+
+
+//============Работа с прослушкой событий===================
+
+// const button = document.querySelector('#button');
+// const img = document.querySelector('#logo');
+// button.value = 'Delete';
+
+// button.addEventListener('click', function() {
+//   console.log('Click 1');
+//   img.remove();
+// });
+
+// button.onclick = function() {
+//   console.log('click');
+//   img.remove();
+// }
+
+
+//============Работа с прослушкой событий (Форма)===================
+
+// const inputText = document.querySelector('#input-text');
+// const textBlock = document.querySelector('#text-block');
+
+// inputText.addEventListener('input', function() {
+//   console.log(inputText.value);
+//   textBlock.innerText = inputText.value;
+// });
+
+// inputText.addEventListener('input', () => {
+//   console.log(inputText.value);
+//   textBlock.innerText = inputText.value;
+// });
+
+// inputText.addEventListener('input', inputHandler);
+
+// function inputHandler() {
+//   console.log(inputText.value);
+//   textBlock.innerText = inputText.value;
+// };
+
+//==============Объект event=====================================
+
+// const list = document.querySelector('#list');
+
+// list.addEventListener('click', function(event) {
+  // console.log(this);
+  // console.log(event);
+  // console.log(event.target);
+// });
+
+
+
+//============Работа с елементами==================================
+
+/*
+Создать элемент
+document.createElement('tag-name');
+
+Изменить HTML содержимое внутри элемента
+element.innerHTML = '';
+
+Изменить текстовое содержимое внутри элемента
+node.innerText = '';
+
+Клонирование элемента
+node.cloneNode() // true - с внутреннит содержимым (текст и теги)
+false - без внутреннего содержимого;
+
+Вставить элемент внутрь другого элемента
+element.append(nodesOrDOMStrings);
+
+Удалить элемент
+element.remove();
+*/
+
+
+//Выбор контейнера
+
+// const container = document.querySelector('#elementsContainer');
+
+//Создание заголовка
+
+// const newHeader = document.createElement('h1');
+// newHeader.innerText = 'New header';
+// container.append(newHeader);
+
+// Копирование шапки
+
+// const mainHeader = document.querySelector('header');
+// const headerCopy = mainHeader.cloneNode(true);
+// container.append(headerCopy);
+
+// Вставка разметки через строки
+
+// const htmlExample = '<h2>Еще один заголовок</h2>';
+// container.insertAdjacentHTML('beforeend', htmlExample);
+
+// Вставка разметки через шаблонные строки
+
+// const title = 'Text title';
+// const htmlExample = `<h2>${title}</h2>`;
+// container.insertAdjacentHTML('beforeend', htmlExample);
