@@ -623,3 +623,31 @@ element.remove();
 
 //   todoInput.focus();
 // };
+
+//=============setInterval==============================================================
+
+// const timerIntervalID = setInterval(function() {
+//   console.log('Fired!');
+// }, 1000);
+
+// clearInterval(timerIntervalID);
+
+
+//===============setTimeout==============================================================
+
+// const timerID = setTimeout(function() {
+//   console.log('setTimeout Fired!');
+// }, 2000);
+
+// clearInterval(timerID);
+
+
+//=============setInterval + setTimeout==================================================
+
+// const timerID = setInterval(function() {
+//   console.log('setInterval lets go!');
+// }, 1000);
+
+// setTimeout(function(){
+//   clearInterval(timerID);
+// }, 10000);
