@@ -651,3 +651,78 @@ element.remove();
 // setTimeout(function(){
 //   clearInterval(timerID);
 // }, 10000);
+
+
+// =============== Stopwatch =============================================================
+
+// const counterElement = document.querySelector('#counter');
+// let counter = 0;
+// let timerID;
+
+// const btnStart = document.querySelector('#start');
+// btnStart.onclick = function () {
+//   console.log('btnStart');
+//   timerID = setInterval(function () {
+//     counter++;
+//     counterElement.innerText = counter;
+//   }, 1000);
+// };
+
+// const btnPause = document.querySelector('#pause');
+// btnPause.onclick = function () {
+//   console.log('btnPause');
+//   clearInterval(timerID);
+// };
+
+// const btnReset = document.querySelector('#reset');
+// btnReset.onclick = function() {
+//   console.log('btnReset');
+//   counter = 0;
+//   counterElement.innerText = counter;
+//   //clearInterval(timerID);
+// };
+
+
+//================ Async functions =======================================================
+
+// function promiseFunction() {
+//   return new Promise(function(resolve, reject) {
+//     setTimeout(() => {
+//       const result = false;
+//       if(result) {
+//         resolve('DONE!');
+//       } else {
+//         reject('FAIL!');
+//       };
+//     }, 500);
+//   });
+// };
+
+// async function startPromise() {
+//   try {
+//     const result = await promiseFunction();
+//     console.log(result);
+//   } catch (err) {
+//     console.log(err);
+//   };
+// };
+// startPromise();
+
+//================= Курсы валют ==========================================================
+
+// async function getCurrencies() {
+//   const url = 'https://www.cbr-xml-daily.ru/daily_json.js'
+//   const respons = await fetch(url);
+//   const data = await respons.json();
+
+//   const usdRate = data.Valute.USD.Value.toFixed(2);
+//   const eurRate = data.Valute.EUR.Value.toFixed(2);
+
+//   const usdElement = document.querySelector('#usd');
+//   const eurElement = document.querySelector('#eur');
+
+//   usdElement.innerText = usdRate;
+//   eurElement.innerText = eurRate;
+// };
+
+// getCurrencies();
